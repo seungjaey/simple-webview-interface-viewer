@@ -10,7 +10,7 @@ type PageName = string;
 export const getServerSideProps: GetServerSideProps<{ pageName: PageName }> = async () => {
   return {
     props: {
-      pageName: 'home',
+      pageName: 'page - 1',
     },
   };
 };
@@ -20,7 +20,7 @@ const Main = styled('main', {
   backgroundColor: '#F1F2F6',
 });
 
-const HomePage = ({ pageName }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+const PageOne = ({ pageName }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <>
       <Head>
@@ -38,4 +38,4 @@ const HomePage = ({ pageName }: InferGetServerSidePropsType<typeof getServerSide
   );
 };
 
-export default HomePage;
+export default PageOne;
